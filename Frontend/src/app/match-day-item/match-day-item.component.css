@@ -1,0 +1,51 @@
+
+.match-day-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+#search-container {
+  text-align: center;
+}
+
+#search-container label {
+  margin-right: 20px;
+}
+
+#search-container label input {
+  padding: 8px 10px 9px 10px;
+  border: none;
+}
+
+#search-container button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#matches-container {
+  width: 80%;
+  margin-left: 10%;
+}
+
+#no-matches-message {
+  padding: 150px 0;
+  text-align: center;
+}
+
+mat-card {
+  background-color: #3b6e83;
+  margin-top: 2px;
+}
+
+mat-card-title {
+  color: #cfd8dc;
+}
+
+mat-divider {
+  background-color: #cfd8dc;
+}
+
+#no-match-days-message {
+  text-align: center;
+  padding-top: 200px;
+}

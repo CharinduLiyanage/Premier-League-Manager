@@ -1,0 +1,61 @@
+#random-match-grid {
+  font-size: 15px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 50px;
+  padding: 30px;
+  border: #9f9f50 5px double;
+  border-radius: 30px;
+  width: 60%;
+  margin-left: 17%;
+  row-gap: 20px;
+}
+
+#\#all-matches-played-message {
+  text-align: center;
+  padding-top: 200px;
+}
+
+mat-divider {
+  color: #cfd8dc;
+  background-color: #cfd8dc;
+}
+mat-card {
+  width: 80%;
+  margin-left: 10%;
+  height: 450px;
+  background-color: #3b6e83;
+}
+
+mat-card-title {
+  color: #cfd8dc;
+}
+
+mat-card-content {
+  color: #b2e5e5;
+}
+
+.data {
+  color: #abe08e;
+}
+
+mat-card-actions {
+  margin-top: 50px;
+}
+
+mat-card-actions .mat-raised-button {
+  margin-right: 30px;
+}
+
+#discard-button {
+  background-color: #d97777;
+}
+
+#add-match {
+  background-color: #569b56;
+}
+
+#new-match {
+  background-color: #7272e3;
+}

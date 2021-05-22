@@ -1,0 +1,47 @@
+<div *ngIf="!(matchesMaster|listIsEmpty)">
+  <div id="search-container">
+    <label>
+      <input [(ngModel)]="date" type="date"/>
+    </label>
+    <button (click)="search()" mat-raised-button>
+      <mat-icon>search</mat-icon>
+      <span>Search Match-Days</span>
+    </button>
+    <button (click)="reset()" mat-raised-button>
+      <mat-icon>settings_backup_restore</mat-icon>
+      <span>Reset</span>
+    </button>
+  </div>
+
+  <div id="matches-container">
+    <ng-container *ngIf="!(matches|listIsEmpty)">
+      <mat-card *ngFor="let date of matches|matchDays">
+        <mat-card-title>
+          Match-Day of {{matchesMaster|matchDays|matchDaysIndex:date}} of {{matchesMaster|matchDays|matchDaysCount}}
+        </mat-card-title>
+        <mat-divider></mat-divider>
+        <div class="match-day-grid">
+          <ng-container *ngFor="let match of matches">
+            <app-match-item *ngIf="match.date|matchEquals:date" [match]="match"></app-match-item>
+          </ng-container>
+        </div>
+      </mat-card>
+    </ng-container>
+
+    <div *ngIf="matches|listIsEmpty" id="no-matches-message">
+      <mat-icon>
+        event_busy
+      </mat-icon>
+      <div>There are no matches on {{date|date:'fullDate'}} !</div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="(matchesMaster|listIsEmpty)" id="no-match-days-message">
+  <mat-icon>new_releases</mat-icon>
+  <div>There are no matches to display!</div>
+</div>
+
+
+
+

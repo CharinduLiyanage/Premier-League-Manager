@@ -1,0 +1,97 @@
+/* AppComponent's private CSS styles */
+header {
+  /*background-color: #607d8b;*/
+  background: repeating-linear-gradient(
+    -45deg,
+    #606dbc,
+    #6b948b 2px,
+    #4b6e64 1px,
+    #468198 2px,
+    #1a1f43 4px
+  );
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+#content {
+  min-height: 67%;
+}
+
+#years {
+  border: yellow 2px dot-dot-dash;
+  /*background-color: #607d8b;*/
+  background: inherit;
+  font-size: 0.7em;
+  font-family: inherit;
+  color: #eee;
+}
+
+option {
+  background-color: #607d8b;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 10px;
+  padding: 20px 10px 10px;
+  color: #eee;
+  font-weight: bold;
+}
+
+nav {
+  text-align: center;
+}
+
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin: 10px 20px 20px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+nav a:visited, a:link {
+  color: #607d8b;
+}
+
+nav a:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+
+nav a.active {
+  color: #039be5;
+}
+
+nav a span {
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+mat-icon {
+  margin: 2px;
+  font-size: 20px;
+}
+
+footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  text-align: center;
+  /*padding: 3px;*/
+  /*background-color: DarkSalmon;*/
+  background: repeating-linear-gradient(
+    -45deg,
+    #606dbc,
+    #6b948b 2px,
+    #468198 2px,
+    #1a1f43 4px
+  );
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: #cfd8dc;
+}

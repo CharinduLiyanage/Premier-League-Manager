@@ -1,0 +1,95 @@
+table {
+  background-color: #3b6e83;
+}
+
+td {
+  color: #abe08e;
+}
+
+th {
+  color: #b2e5e5;
+}
+
+mat-paginator {
+  background-color: #3b6e83;
+  color: #b2e5e5;
+}
+
+.full-width-table {
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+}
+
+#league-table-container {
+  float: right;
+  width: 80%;
+  margin: 0 50px 10px 20px;
+}
+
+#sort-button-container {
+  margin-top: 10px;
+  margin-left: 25px;
+  float: left;
+  width: 12%;
+}
+
+#sort-button-container button {
+  text-align: left;
+  width: 160px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#no-data-message {
+  padding: 15px 0;
+  text-align: center;
+  background-color: #3b6e83;
+  color: #d4f1c0;
+  border-bottom: rgba(0, 0, 0, .12) 1px solid;
+}
+
+#wins-button {
+  background: repeating-linear-gradient(
+    to right,
+    #f6ba52,
+    #f6ba52 10px,
+    #ffd180 10px,
+    #ffd180 20px
+  );
+  color: black;
+}
+
+#goals-for-button {
+  background: repeating-linear-gradient(
+    to right,
+    #77d978,
+    #61a743 10px,
+    #86997c 10px,
+    #a8d289 20px
+  );
+  color: #351818;
+}
+
+#points-button {
+  background: repeating-linear-gradient(
+    to right,
+    #cda3ea,
+    #9472ac 10px,
+    #5a4375 10px,
+    #b29cc1 20px
+  );
+  color: #ebf6d8;
+}
+#wins {
+  color: #f1f154;
+}
+#goals-for {
+  color: #19ff00;
+}
+#point {
+  color: #eb91ff;
+}

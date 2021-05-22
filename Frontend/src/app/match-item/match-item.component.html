@@ -1,0 +1,30 @@
+<mat-card class="match-container">
+  <div class="grid-container">
+    <a class="grid-item" mat-flat-button>
+      <mat-icon>home</mat-icon>
+      <span [ngClass]="{'winner': match.scoreHome >= match.scoreAway}">
+        {{match.clubHome.name}}
+      </span>
+    </a>
+    <a [ngClass]="{'winner': match.scoreHome >= match.scoreAway}" class="grid-item" mat-flat-button>
+      {{match.scoreHome}}
+    </a>
+    <a [ngClass]="{'loser': match.scoreHome <= match.scoreAway}" class="winner" class="grid-item" mat-flat-button>
+      <
+    </a>
+    <div class="grid-item match-date">
+      <div>FT</div>
+      <div>{{match.date|dateToString|date:'longDate'}}</div>
+    </div>
+    <a [ngClass]="{'winner': match.scoreHome <= match.scoreAway}" class="grid-item" class="grid-item" mat-flat-button>
+      <mat-icon>flight</mat-icon>
+      <span>{{match.clubAway.name}}</span>
+    </a>
+    <a [ngClass]="{'winner': match.scoreHome <= match.scoreAway}" class="grid-item" mat-flat-button>
+      {{match.scoreAway}}
+    </a>
+    <a [ngClass]="{'loser': match.scoreHome >= match.scoreAway}" class="winner" class="grid-item" mat-flat-button>
+      <
+    </a>
+  </div>
+</mat-card>

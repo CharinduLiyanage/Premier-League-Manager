@@ -1,0 +1,101 @@
+<div id="sort-button-container">
+  <button id="wins-button" (click)="sortChange('wins')" mat-raised-button>
+    <mat-icon>sort</mat-icon>
+    <span>Sort By Wins</span>
+  </button>
+  <button id="goals-for-button" (click)="sortChange('goalsFor')" mat-raised-button>
+    <mat-icon>sort</mat-icon>
+    <span>Sort By Goals For</span>
+  </button>
+  <button id="points-button" (click)="sortChange('points')" mat-raised-button>
+    <mat-icon>sort</mat-icon>
+    <span>Sort By Points</span>
+  </button>
+</div>
+
+
+<div id="league-table-container">
+  <div class="mat-elevation-z8">
+    <table aria-label="Elements" class="full-width-table" mat-table matSort>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th *matHeaderCellDef mat-header-cell>Name</th>
+        <td *matCellDef="let row" mat-cell>{{row.name}}</td>
+      </ng-container>
+
+      <!-- location Column -->
+      <ng-container matColumnDef="location">
+        <th *matHeaderCellDef mat-header-cell>Location</th>
+        <td *matCellDef="let row" mat-cell>{{row.location}}</td>
+      </ng-container>
+
+      <!-- matchesPlayed Column -->
+      <ng-container matColumnDef="matchesPlayed">
+        <th *matHeaderCellDef mat-header-cell>Matches Played</th>
+        <td *matCellDef="let row" mat-cell>{{row.matchesPlayed}}</td>
+      </ng-container>
+
+      <!-- wins Column -->
+      <ng-container matColumnDef="wins">
+        <th id="wins" *matHeaderCellDef mat-header-cell>Wins</th>
+        <td *matCellDef="let row" mat-cell>{{row.wins}}</td>
+      </ng-container>
+
+      <!-- draws Column -->
+      <ng-container matColumnDef="draws">
+        <th *matHeaderCellDef mat-header-cell>Draws</th>
+        <td *matCellDef="let row" mat-cell>{{row.draws}}</td>
+      </ng-container>
+
+      <!-- losses Column -->
+      <ng-container matColumnDef="losses">
+        <th *matHeaderCellDef mat-header-cell>Losses</th>
+        <td *matCellDef="let row" mat-cell>{{row.losses}}</td>
+      </ng-container>
+
+      <!-- goalsFor Column -->
+      <ng-container matColumnDef="goalsFor">
+        <th id="goals-for" *matHeaderCellDef mat-header-cell>Goals For</th>
+        <td *matCellDef="let row" mat-cell>{{row.goalsFor}}</td>
+      </ng-container>
+
+      <!-- goalsAgainst Column -->
+      <ng-container matColumnDef="goalsAgainst">
+        <th *matHeaderCellDef mat-header-cell>Goals Against</th>
+        <td *matCellDef="let row" mat-cell>{{row.goalsAgainst}}</td>
+      </ng-container>
+
+      <!-- goalDifference Column -->
+      <ng-container matColumnDef="goalDifference">
+        <th *matHeaderCellDef mat-header-cell>Goal Difference</th>
+        <td *matCellDef="let row" mat-cell>{{row.goalDifference}}</td>
+      </ng-container>
+
+      <!-- points Column -->
+      <ng-container matColumnDef="points">
+        <th id="point" *matHeaderCellDef mat-header-cell>Points</th>
+        <td *matCellDef="let row" mat-cell>{{row.points}}</td>
+      </ng-container>
+
+      <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+      <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+    </table>
+
+    <div *ngIf="data|listIsEmpty" id="no-data-message">
+      <mat-icon>new_releases</mat-icon>
+      <div>There are no clubs to display!</div>
+    </div>
+
+    <mat-paginator #paginator
+                   [length]="dataSource?.data.length"
+                   [pageIndex]="0"
+                   [pageSizeOptions]="[8, 15, 20]"
+                   [pageSize]="8">
+    </mat-paginator>
+  </div>
+</div>
+<div style="clear:both;"></div>
+
+
+

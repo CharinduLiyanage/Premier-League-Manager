@@ -1,0 +1,50 @@
+<div *ngIf="randomMatch">
+  <mat-card>
+    <mat-card-title>Randomly Generated Match</mat-card-title>
+    <mat-divider></mat-divider>
+
+    <mat-card-content id="random-match-grid">
+      <div>Match Date</div>
+      <div>:</div>
+      <div>
+        <div class="data">{{randomMatch.date|dateToString|date:'fullDate'}}</div>
+      </div>
+
+      <div>Home Club Name</div>
+      <div>:</div>
+      <div class="data">{{randomMatch.clubHome.name}}</div>
+
+      <div>Away Club Name</div>
+      <div>:</div>
+      <div class="data">{{randomMatch.clubAway.name}}</div>
+
+      <div>Home Club Score</div>
+      <div>:</div>
+      <div class="data">{{randomMatch.scoreHome}}</div>
+
+      <div>Away Club Score</div>
+      <div>:</div>
+      <div class="data">{{randomMatch.scoreAway}}</div>
+    </mat-card-content>
+
+    <mat-card-actions style="text-align: center">
+      <button id="discard-button" mat-raised-button routerLink="/dashboard">
+        <mat-icon>clear</mat-icon>
+        <span>Discard Random Match</span>
+      </button>
+      <button id="add-match" (click)="postRandomMatch()" mat-raised-button>
+        <mat-icon>post_add</mat-icon>
+        <span>Add Match</span>
+      </button>
+      <button id="new-match" (click)="getNewRandomMatch()" mat-raised-button>
+        <mat-icon>model_training</mat-icon>
+        <span>Generate New Match</span>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div *ngIf="!randomMatch" id="#all-matches-played-message">
+  <mat-icon>playlist_add_check</mat-icon>
+  <div>All Possible Matches are Played!</div>
+</div>

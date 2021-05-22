@@ -1,0 +1,47 @@
+<html>
+<body>
+<header>
+  <div style="text-align:center">
+    <h1 id="title">{{title}}
+      <label for="years">
+        <select (change)="yearChange()" [(ngModel)]="selectedYear" [value]="'/2020'" id="years" name="years">
+          <option *ngFor="let year of years" value="/{{year}}">{{year}}</option>
+        </select>
+      </label>
+    </h1>
+  </div>
+
+  <nav>
+    <a mat-button routerLink="/dashboard">
+      <mat-icon>apps</mat-icon>
+      <span>Home</span>
+    </a>
+    <a mat-button routerLink="/randomMatch">
+      <mat-icon>shuffle</mat-icon>
+      <span>Generate Random Match</span>
+    </a>
+    <a mat-button routerLink="/leagueTable">
+      <mat-icon>table_chart</mat-icon>
+      <span>League Table</span>
+    </a>
+    <a mat-button routerLink="/matches">
+      <mat-icon>view_list</mat-icon>
+      <span>Match List</span>
+    </a>
+  </nav>
+</header>
+
+<div id="content">
+  <router-outlet></router-outlet>
+</div>
+
+<footer>
+  <div>Author: Charindu Liyanage
+    <br>
+    <a href="mailto:charindu.2018411@iit.ac.lk">charindu.2018411@iit.ac.lk</a>
+  </div>
+</footer>
+
+</body>
+
+</html>
