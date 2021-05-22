@@ -1,6 +1,6 @@
 # Premier-League-Manager
 
-###This is an application developed to simulate the manipulation of the Premier League Championship.
+### This is an application developed to simulate the manipulation of the Premier League Championship.
 
 **This application consists of manly two parts.**  
 1. Command Line Interface (CLI)  
